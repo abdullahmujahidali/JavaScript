@@ -1,5 +1,7 @@
 # Inception
 
+We set the stage for your React.js learning adventure. You'll gain an understanding of what React is, its role in modern web development, and why it's a crucial skill. We'll ignite your curiosity and prepare you to dive into the exciting realm of React.js.
+
 ### What is Emmet?
 
 Emmet is basically generates some code for you.
@@ -51,3 +53,21 @@ Isomorphic ka matlab hai ek hi codebase ko server aur client dono sides ke liye 
 ### Why React and React Dom are not together?
 
 It is because React can be used in different environments. For example, React can be used in mobile applications using React Native, React 3D. So, React Dom is used to render React in the browser.
+
+### What is React.createElement and creating a root?
+
+React.createElement is used to create a React element. It takes three arguments: type, props, and children. It returns a React element.
+
+The root is the entry point of the React application. It is the parent of all the components. RootElement is created by ReactDOM.
+
+### How to create an element in HTML using React CDN?
+
+First of all we just created an h1 tag using `React.createElement` after that we created a root (root is something where all the React code will run). and we created the root using `ReactDOM.createRoot` and pass the id of div which is `root` in this case. After that we use `root.render(heading)` to render the heading in the root.
+
+```javascript
+<script>
+  const heading = React.createElement( "h1",
+  {}, "Hello World From React CDN" ); const root = ReactDOM.createRoot(document.getElementById("root"));
+  root.render(heading);
+</script>
+```
