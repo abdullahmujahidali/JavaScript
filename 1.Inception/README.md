@@ -28,11 +28,11 @@ npm install react react-dom --save
 
 You can use CDN to install React.
 
-````javascript
+```javascript
     <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
     <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
-    ```
-````
+
+```
 
 ### What is CrossOrigin?
 
