@@ -97,7 +97,104 @@ const parent = React.createElement(
   React.createElement(
     "div",
     { id: "child" },
-    React.createElement("h1", { id: "parent" }, "I am a nested h1 tag")
+    React.createElement("h1", {}, "I am a nested h1 tag")
   )
 );
 ```
+
+### How you can create a sibling element in React?
+
+You can create another element inside an element by passing the element as a child to the parent element.
+For example
+
+```html
+<div id="parent">
+  <div id="child">
+    <h1>I am a nested h1</h1>
+    <h2>I am a sibling of h1</h2>
+  </div>
+</div>
+```
+
+Solution:
+
+```javascript
+const parent = React.createElement(
+  "div",
+  { id: "parent" },
+  React.createElement("div", { id: "child" }, [
+    React.createElement("h1", { id: "h1" }, "I am a nested h1 tag"),
+    React.createElement("h2", { id: "h2" }, "I am a sibling h2 tag"),
+  ])
+);
+```
+
+### How you can create multiple childrens element in React?
+
+You can create another element inside an element by passing the element as a child to the parent element.
+For example
+
+```html
+<div id="parent">
+  <div id="child">
+    <h1>I am a nested h1</h1>
+    <h2>I am a sibling of h1</h2>
+  </div>
+  <div id="child2">
+    <h1>I am a nested h1</h1>
+    <h2>I am a sibling of h1</h2>
+  </div>
+</div>
+```
+
+Solution:
+
+```javascript
+const parent = React.createElement("div", { id: "parent" }, [
+  React.createElement("div", { id: "child" }, [
+    React.createElement("h1", { id: "h1" }, "I am a nested h1 tag"),
+    React.createElement("h2", { id: "h2" }, "I am a sibling h2 tag"),
+  ]),
+  React.createElement("div", { id: "child2" }, [
+    React.createElement("h1", { id: "h1" }, "I am a nested h1 tag"),
+    React.createElement("h2", { id: "h2" }, "I am a sibling h2 tag"),
+  ]),
+]);
+```
+
+### Does the order of scripts matter in HTML?
+
+Yes, the order of scripts matters in HTML. If you are using React CDN, then you have to import React first and then React DOM. If you are using React from a package manager, then the order doesn't matter.
+
+Right Order:
+
+```html
+<script
+  crossorigin
+  src="https://unpkg.com/react@18/umd/react.development.js"
+></script>
+<script
+  crossorigin
+  src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+></script>
+
+<script src="./App.js"></script>
+```
+
+Wrong Order:
+
+```html
+<script src="./App.js"></script>
+<script
+  crossorigin
+  src="https://unpkg.com/react@18/umd/react.development.js"
+></script>
+<script
+  crossorigin
+  src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+></script>
+```
+
+### If I have already something in my <div id="root"> <h1> I am here </h1> </div> what will happen when i do root.render(parent)
+
+Whatever is in the root it will replace with the parent component.
