@@ -71,3 +71,19 @@ First of all we just created an h1 tag using `React.createElement` after that we
   root.render(heading);
 </script>
 ```
+
+### How you can create a nested element in React?
+
+You can create another element inside an element by passing the element as a child to the parent element.
+
+```javascript
+const parent = React.createElement(
+  "div",
+  { id: "parent" },
+  React.createElement(
+    "div",
+    { id: "child" },
+    React.createElement("h1", { id: "parent" }, "I am a nested h1 tag")
+  )
+);
+```
