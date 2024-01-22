@@ -1,0 +1,23 @@
+{
+  "name": "namastay-react",
+  "version": "1.0.0",
+  "description": "This is my Namaste React learning ",
+  "main": "App.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abdullahmujahidali/Namastay-React.git"
+  },
+  "keywords": [
+    "react",
+    "javascript"
+  ],
+  "author": "abdullahmujahidali",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/abdullahmujahidali/Namastay-React/issues"
+  },
+  "homepage": "https://github.com/abdullahmujahidali/Namastay-React#readme"
+}
