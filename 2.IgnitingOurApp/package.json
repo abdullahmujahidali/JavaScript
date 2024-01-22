@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/abdullahmujahidali/Namastay-React/issues"
   },
-  "homepage": "https://github.com/abdullahmujahidali/Namastay-React#readme"
+  "homepage": "https://github.com/abdullahmujahidali/Namastay-React#readme",
+  "devDependencies": {
+    "parcel": "^2.11.0"
+  }
 }
