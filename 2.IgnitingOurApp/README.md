@@ -32,3 +32,7 @@ A compiler is a tool that converts one language to another language. For example
 ### What is `package-lock.json`?
 
 package-lock.json keeps track of the exact version of a package that is been installed. It is used to lock the version of the package.
+
+### What is transitive dependencies?
+
+When we install a package, it may have some dependencies. Those dependencies are called transitive dependencies.
