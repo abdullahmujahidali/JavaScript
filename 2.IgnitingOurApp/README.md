@@ -36,3 +36,10 @@ package-lock.json keeps track of the exact version of a package that is been ins
 ### What is transitive dependencies?
 
 When we install a package, it may have some dependencies. Those dependencies are called transitive dependencies.
+
+### `npx` vs `npm`
+
+With `npm` is used to install packages globally. `npx` is used to execute a package.
+
+### Why CDN way is not a good way
+Fetching from CDN it will make a network call which is expensive. It will also make our app vulnerable to security attacks.
