@@ -42,4 +42,25 @@ When we install a package, it may have some dependencies. Those dependencies are
 With `npm` is used to install packages globally. `npx` is used to execute a package.
 
 ### Why CDN way is not a good way
+
 Fetching from CDN it will make a network call which is expensive. It will also make our app vulnerable to security attacks.
+
+### What does Parcel does for you
+
+1. Creates a dev build
+2. Creates a local server
+3. HMR = Hot Module Replacement
+4. File Watching Algorithm - written in C++
+5. Caching - Faster Development Experience
+6. Image Optimization
+7. Minification
+8. Bundling (its basic job)
+9. Compressing
+10. Content Hashing
+11. Code Splitting
+12. Differential Bundling
+13. Tree Shaking
+
+### What is tree-shaking?
+
+Removing unused code for you
