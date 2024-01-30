@@ -1,9 +1,10 @@
 # JavaScript
 
-JavaScript is a `synchronous single-threaded` language.
-Everything in JavaScript happens inside an Execution Context
+**JavaScript Fundamental**: JavaScript is a `synchronous single-threaded` language.
 
-### Execution Context:
+**JavaScript Fundamental**: Everything in JavaScript happens inside an Execution Context
+
+## Execution Context:
 
 Execution Context have 2 columns
 
@@ -19,4 +20,43 @@ An execution context is created. Execution context is created in 2 phase.
 
 When working with a function in code execution context. It is normal to see another memory creation phase for a function.
 
-![](images/executionContext.png)
+![Execution Context](images/executionContext.png)
+
+### Call Stack
+
+It's a stack, at the bottom of our stack we have our global execution context, whenever any JavaScript program is run the stack is populated by GEC. Whenever a function is invoked or a bew GEC is created for a function call this will also be pushed inside the stack.
+![Call Stack](images/callStack.png)
+
+**JavaScript Fundamental**: `Call stack maintains the order of execution of execution context`
+
+## Hoisting:
+
+Hoisting is a phenomena in JavaScript in which we can access variables and functions even before we have initialized it without any error, we are doing all this just because of `execution context`
+
+Example 1:
+
+```javascript
+var x = 7;
+function getName() {
+  console.log("Hello World");
+}
+
+getName();
+console.log(x);
+```
+
+If we see the output we will get: `Hello World` and `7`
+
+Example 2:
+
+```javascript
+getName();
+console.log(x);
+
+var x = 7;
+function getName() {
+  console.log("Hello World");
+}
+```
+
+If we see the output we will get: `Hello World` and `undefined`.
