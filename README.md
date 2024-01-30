@@ -1,1 +1,1 @@
-# Namastay-React
+# JavaScript
