@@ -1,5 +1,16 @@
 # JavaScript
 
+- [JavaScript](#javascript)
+  - [Execution Context:](#execution-context)
+    - [What happen when you run JavaScript code?](#what-happen-when-you-run-javascript-code)
+    - [Call Stack](#call-stack)
+  - [Hoisting:](#hoisting)
+  - [Promises and Async/Await](#promises-and-asyncawait)
+    - [Promises:](#promises)
+    - [Async/Await:](#asyncawait)
+  - [How functions work in JavaScript](#how-functions-work-in-javascript)
+    - [Function Invocation:](#function-invocation)
+
 **JavaScript Fundamental**: JavaScript is a `synchronous single-threaded` language.
 
 **JavaScript Fundamental**: Everything in JavaScript happens inside an Execution Context
