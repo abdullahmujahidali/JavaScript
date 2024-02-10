@@ -11,6 +11,8 @@
   - [How functions work in JavaScript](#how-functions-work-in-javascript)
     - [Function Invocation:](#function-invocation)
 
+---
+
 **JavaScript Fundamental**: JavaScript is a `synchronous single-threaded` language.
 
 **JavaScript Fundamental**: Everything in JavaScript happens inside an Execution Context
