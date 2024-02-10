@@ -31,7 +31,7 @@ It's a stack, at the bottom of our stack we have our global execution context, w
 
 ## Hoisting:
 
-Hoisting is a phenomena in JavaScript in which we can access variables and functions even before we have initialized it without any error, we are doing all this just because of `execution context`
+Hoisting is a phenomena in JavaScript in which we can access variables and functions even before we have initialized it without any error, we are doing all this just because of `execution context`.
 
 Example 1:
 
@@ -60,3 +60,27 @@ function getName() {
 ```
 
 If we see the output we will get: `Hello World` and `undefined`.
+
+## Promises and Async/Await
+
+### Promises:
+
+- What are they? Promises handle future events in code. They promise to do something and tell you when it's done or if it failed.
+- Benefits: Better than old methods. Make code clean. Good for handling errors.
+- Limit: Can be complex for many operations.
+
+### Async/Await:
+
+- What is it? It's a simpler way to use Promises. Makes code look like normal, line-by-line code.
+- Benefits: Easier to read and write. Uses try/catch for errors, which is simple.
+- Not a Replacement: Async/Await uses Promises. It's just a nicer way to write them.
+
+In short Async/Await made Promises easier. Promises were a big step from older methods. Both are important in JavaScript.
+
+## How functions work in JavaScript
+
+### Function Invocation:
+
+We can invoke a function without even initializing it and this is because of hoisting.
+
+![Function Execution](images/functionExecution.png)
