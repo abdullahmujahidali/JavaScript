@@ -140,6 +140,7 @@ Window is the global object in client side JavaScript. It is the default object 
 `undefined` is a type in JavaScript. It is kind of a placeholder for a variable that has not been defined yet.
 
 Code Example 1 (Undefined):
+
 ![Undefined](images/undefined.png)
 
 Code Example 2(Undefined):
@@ -184,6 +185,7 @@ Here in the below example `b` is not defined in the local memory of `c` so we wi
 ![Lexical Scoping](images/lexicalscoping2.png)
 
 Understanding Lexical Scoping using Call Stack
+
 ![Lexical Scoping](images/lexicalCallStack.png)
 
 ### Scope Chain:
@@ -192,7 +194,6 @@ Scope chain is the order in which JavaScript engine will look for a variable in 
 
 [Back to Top](#javascript)
 
-
 ## let & const in JavaScript
-In this module we will study about let and const in JavaScript along with the hoisting, block scope and what is the difference from var
 
+In this module we will study about let and const in JavaScript along with the hoisting, block scope and what is the difference from var
