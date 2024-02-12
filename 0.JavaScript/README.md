@@ -10,12 +10,19 @@
     - [Async/Await:](#asyncawait)
   - [How functions work in JavaScript](#how-functions-work-in-javascript)
     - [Function Invocation:](#function-invocation)
+  - [Shortest JavaScript Program](#shortest-javascript-program)
+    - [Window Object:](#window-object)
+  - [Defined vs Undefined](#defined-vs-undefined)
+  - [Scope Change](#scope-change)
+    - [Lexical Environment:](#lexical-environment)
 
 ---
 
 **JavaScript Fundamental**: JavaScript is a `synchronous single-threaded` language.
 
 **JavaScript Fundamental**: Everything in JavaScript happens inside an Execution Context
+
+**JavaScript Fundamental**: JavaScript is loosely typed language.
 
 ## Execution Context:
 
@@ -34,6 +41,8 @@ An execution context is created. Execution context is created in 2 phase.
 When working with a function in code execution context. It is normal to see another memory creation phase for a function.
 
 ![Execution Context](images/executionContext.png)
+
+[Back to Top](#javascript)
 
 ### Call Stack
 
@@ -74,6 +83,8 @@ function getName() {
 
 If we see the output we will get: `Hello World` and `undefined`.
 
+[Back to Top](#javascript)
+
 ## Promises and Async/Await
 
 ### Promises:
@@ -90,10 +101,76 @@ If we see the output we will get: `Hello World` and `undefined`.
 
 In short Async/Await made Promises easier. Promises were a big step from older methods. Both are important in JavaScript.
 
+[Back to Top](#javascript)
+
 ## How functions work in JavaScript
+
+Functions are first class citizens in JavaScript. They can be passed as arguments to other functions, returned as values from other functions, and assigned to variables.
 
 ### Function Invocation:
 
 We can invoke a function without even initializing it and this is because of hoisting.
 
 ![Function Execution](images/functionExecution.png)
+
+[Back to Top](#javascript)
+
+## Shortest JavaScript Program
+
+`An empty file is a valid JavaScript program.` This is true because by default JavaScript has a global execution context and it will be pushed to the call stack which will have window object, this pointer and other default objects.
+
+### Window Object:
+
+Window is the global object in client side JavaScript. It is the default object of the browser. It represents the content of the browser window. It is the root of the DOM (Document Object Model). Whenever a global execution context is created it will have window object in it.
+
+- Chrome JavaScript engine is v8. It is the engine that runs JavaScript in the browser. It is written in C++.
+- Safari JavaScript engine is Nitro. It is the engine that runs JavaScript in the browser. It is written in C++.
+- Firefox JavaScript engine is SpiderMonkey. It is the engine that runs JavaScript in the browser. It is written in C++.
+
+`this === window // true` in case of browser it is window.
+
+![Window This Operator](images/shortestProgram.png)
+
+[Back to Top](#javascript)
+
+## Defined vs Undefined
+
+`undefined` is a type in JavaScript. It is kind of a placeholder for a variable that has not been defined yet.
+
+Code Example 1 (Undefined):
+![Undefined](images/undefined.png)
+
+Code Example 2(Undefined):
+![Undefined](<images/undefined(1).png>)
+
+Code Example 1 (defined):
+![Undefined](images/defined.png)
+
+Never do this (it is not a good practice, as it can lead to bugs):
+![Undefined](images/undefinedMistake.png)
+
+[Back to Top](#javascript)
+
+## Scope Change
+
+Scope is JavaScript is directly related to lexical environment.
+
+`Scope` means where you can access a specific variable or a function in your code.
+
+### Lexical Environment:
+
+Whenever a global execution stack is created a lexical environment is also created.
+
+`Lexical environment is the local memory along with the lexical environment of its parent`
+
+JavaScript engine will try to find local memory for a variable, if it is not found it will go to the outer environment and so on. This is called lexical environment.
+
+Example 1:
+![Lexical Scoping](images/lexicalscoping.png)
+Example 2:
+![Lexical Scoping](images/lexicalscoping1.png)
+Example 3:
+Here in the below example `b` is not defined in the local memory of `c` so we will get an error of `ReferenceError: b is not defined`.
+![Lexical Scoping](images/lexicalscoping2.png)
+
+![Lexical Scoping](images/lexicalCallStack.png)
