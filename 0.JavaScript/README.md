@@ -1,10 +1,10 @@
 # JavaScript
 
 - [JavaScript](#javascript)
-  - [Execution Context:](#execution-context)
+  - [Execution Context](#execution-context)
     - [What happen when you run JavaScript code?](#what-happen-when-you-run-javascript-code)
     - [Call Stack](#call-stack)
-  - [Hoisting:](#hoisting)
+  - [Hoisting](#hoisting)
   - [Promises and Async/Await](#promises-and-asyncawait)
     - [Promises:](#promises)
     - [Async/Await:](#asyncawait)
@@ -15,6 +15,8 @@
   - [Defined vs Undefined](#defined-vs-undefined)
   - [Scope Change](#scope-change)
     - [Lexical Environment:](#lexical-environment)
+    - [Scope Chain:](#scope-chain)
+  - [let \& const in JavaScript](#let--const-in-javascript)
 
 ---
 
@@ -24,7 +26,7 @@
 
 **JavaScript Fundamental**: JavaScript is loosely typed language.
 
-## Execution Context:
+## Execution Context
 
 Execution Context have 2 columns
 
@@ -51,7 +53,7 @@ It's a stack, at the bottom of our stack we have our global execution context, w
 
 **JavaScript Fundamental**: `Call stack maintains the order of execution of execution context`
 
-## Hoisting:
+## Hoisting
 
 Hoisting is a phenomena in JavaScript in which we can access variables and functions even before we have initialized it without any error, we are doing all this just because of `execution context`.
 
@@ -141,12 +143,15 @@ Code Example 1 (Undefined):
 ![Undefined](images/undefined.png)
 
 Code Example 2(Undefined):
+
 ![Undefined](<images/undefined(1).png>)
 
 Code Example 1 (defined):
+
 ![Undefined](images/defined.png)
 
 Never do this (it is not a good practice, as it can lead to bugs):
+
 ![Undefined](images/undefinedMistake.png)
 
 [Back to Top](#javascript)
@@ -166,11 +171,28 @@ Whenever a global execution stack is created a lexical environment is also creat
 JavaScript engine will try to find local memory for a variable, if it is not found it will go to the outer environment and so on. This is called lexical environment.
 
 Example 1:
+
 ![Lexical Scoping](images/lexicalscoping.png)
+
 Example 2:
+
 ![Lexical Scoping](images/lexicalscoping1.png)
+
 Example 3:
 Here in the below example `b` is not defined in the local memory of `c` so we will get an error of `ReferenceError: b is not defined`.
+
 ![Lexical Scoping](images/lexicalscoping2.png)
 
+Understanding Lexical Scoping using Call Stack
 ![Lexical Scoping](images/lexicalCallStack.png)
+
+### Scope Chain:
+
+Scope chain is the order in which JavaScript engine will look for a variable in the lexical environment.
+
+[Back to Top](#javascript)
+
+
+## let & const in JavaScript
+In this module we will study about let and const in JavaScript along with the hoisting, block scope and what is the difference from var
+
