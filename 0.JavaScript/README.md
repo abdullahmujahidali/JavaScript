@@ -17,6 +17,11 @@
     - [Lexical Environment:](#lexical-environment)
     - [Scope Chain:](#scope-chain)
   - [let \& const in JavaScript](#let--const-in-javascript)
+    - [Temporal Dead Zone:](#temporal-dead-zone)
+    - [Reference Error:](#reference-error)
+    - [Syntax Error:](#syntax-error)
+    - [Type Error:](#type-error)
+    - [How to avoid Temporal Dead Zone?](#how-to-avoid-temporal-dead-zone)
 
 ---
 
@@ -197,3 +202,53 @@ Scope chain is the order in which JavaScript engine will look for a variable in 
 ## let & const in JavaScript
 
 In this module we will study about let and const in JavaScript along with the hoisting, block scope and what is the difference from var
+
+### Temporal Dead Zone:
+
+Temporal dead zone is the time
+since when this `let` variable
+was hoisted and till it is initialized with some value.
+
+### Reference Error:
+
+If we try to access a variable which is not defined we get Reference Error.
+If we are working with `let a` on e.g `line2` and tries to access it on `line 1` we will get a error of Reference Error but with a different message which is `Cannot access 'a' before initialization` it is because of `a` is in Temporal Dead Zone.
+
+### Syntax Error:
+
+If we try to redefine a variable with `let` we will get a syntax error.
+
+```javascript
+let a = 10;
+let a = 20; // Syntax Error
+```
+
+Error: SyntaxError: Identifier 'a' has already been declared
+
+No code will be run if there is a syntax error.
+
+In case of `const` we can't reassign a variable.
+
+```javascript
+const a;
+a = 20;
+```
+
+Error: SyntaxError: Missing initializer in const declaration
+
+### Type Error:
+
+If we try to reassign a variable with `const` we will get a type error.
+
+```javascript
+const a = 10;
+a = 20; // TypeError
+```
+
+Error: TypeError: Assignment to constant variable.
+
+### How to avoid Temporal Dead Zone?
+
+We can avoid Temporal Dead Zone by initializing the variable before we access it.
+
+[Back to Top](#javascript)
