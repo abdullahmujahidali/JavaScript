@@ -9,4 +9,12 @@ const heading = React.createElement(
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
-root.render(heading);
+// JSX (transpiled before it reaches the JS ) - PARCEL - BABEL
+const jsxHeading = (
+  <h1 id="heading" className="head">
+    {" "}
+    Laying the foundation using JSX
+  </h1>
+);
+
+root.render(jsxHeading);
