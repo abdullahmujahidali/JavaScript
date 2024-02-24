@@ -22,6 +22,7 @@
     - [Syntax Error:](#syntax-error)
     - [Type Error:](#type-error)
     - [How to avoid Temporal Dead Zone?](#how-to-avoid-temporal-dead-zone)
+  - [Block Scope](#block-scope)
 
 ---
 
@@ -252,3 +253,9 @@ Error: TypeError: Assignment to constant variable.
 We can avoid Temporal Dead Zone by initializing the variable before we access it.
 
 [Back to Top](#javascript)
+
+## Block Scope
+
+A block is defined by `{}` , block is also known as compound statement
+
+Anything var, functions that lives under the block is called as block scope.
