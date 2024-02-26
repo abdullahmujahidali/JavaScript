@@ -1,26 +1,76 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 
-const heading = React.createElement(
-  "h1",
-  { id: "heading" },
-  "Laying the foundation"
-);
+const Header = () => {
+  return (
+    <div className="header">
+      <img
+        className="logo"
+        src="https://www.logodesign.net/logo/smoking-burger-with-lettuce-3624ld.png"
+        alt="logo"
+      />
+      <div className="nav-items">
+        <ul>
+          <li>Home</li>
+          <li>About Us</li>
+          <li>Contact</li>
+          <li>Cart</li>
+        </ul>
+      </div>
+    </div>
+  );
+};
 
-// JSX (transpiled before it reaches the JS ) - PARCEL - BABEL
-const Title = () => (
-  <h1 id="heading" className="head">
-    Laying the foundation using JSX
-  </h1>
-);
+const RestaurantCard = ({ name, stars, time, cuisine }) => {
+  return (
+    <div className="res-card">
+      <img
+        className="card-img"
+        src="https://static.toiimg.com/thumb/54308405.cms?width=1200&height=900"
+        alt="food_image"
+      />
+      <h3>{name}</h3>
+      <h4>{cuisine}</h4>
+      <h4>{stars}</h4>
+      <h4>{time}</h4>
+    </div>
+  );
+};
 
-const HeadingComponent = () => (
-  <div id="container">
-    <Title />
-    <h1 className="heading">React Component</h1>
-  </div>
-);
+const Body = () => {
+  return (
+    <div className="body">
+      <div className="search">
+        <label>Search</label>
+        <input type="text" />
+      </div>
+      <div className="res-container">
+        <RestaurantCard
+          name="KFC"
+          stars={4.3}
+          time="20 min"
+          cuisine="Fast Foods"
+        />
+        <RestaurantCard
+          name="Fresh Foods"
+          stars={4.3}
+          time="30 min"
+          cuisine="Biryani, North Indian, Asian"
+        />
+      </div>
+    </div>
+  );
+};
+
+const AppLayout = () => {
+  return (
+    <div className="app">
+      <Header />
+      <Body />
+    </div>
+  );
+};
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
-root.render(<HeadingComponent />);
+root.render(<AppLayout />);
